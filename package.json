@@ -14,7 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint -ignore-pattern src/des.ts",
+    "lint": "tsdx lint --ignore-pattern src/des.ts",
     "prepare": "tsdx build"
   },
   "peerDependencies": {
@@ -22,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint --fix -ignore-pattern src/des.ts"
+      "pre-commit": "tsdx lint --fix --ignore-pattern src/des.ts"
     }
   },
   "prettier": {
