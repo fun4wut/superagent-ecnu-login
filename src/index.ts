@@ -1,5 +1,5 @@
 import SA from 'superagent'
-import { createWorker,  } from 'tesseract.js'
+import { createWorker } from 'tesseract.js'
 
 import encode from './des'
 import images from 'images'
