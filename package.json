@@ -14,7 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint --ignore-pattern src/des.ts",
+    "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
   "peerDependencies": {
@@ -22,9 +22,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint --fix --ignore-pattern src/des.ts"
+      "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "*.ts": [
+      "tsdx lint --fix",
+      "git add"
+    ]
+  },
+  "eslintIgnore": ["src/des.ts"],
   "prettier": {
     "printWidth": 100,
     "semi": false,
@@ -37,6 +44,7 @@
   "devDependencies": {
     "@types/superagent": "^4.1.10",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "superagent": "^4.1.0",
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",
