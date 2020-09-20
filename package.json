@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -31,7 +31,9 @@
       "git add"
     ]
   },
-  "eslintIgnore": ["src/des.ts"],
+  "eslintIgnore": [
+    "src/des.ts"
+  ],
   "prettier": {
     "printWidth": 100,
     "semi": false,
